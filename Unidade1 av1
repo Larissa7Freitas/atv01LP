@@ -1,0 +1,26 @@
+public class CalculoMediaStatus {
+    public static void main(String[] args) {
+        calcularMediaEStatus(8.0, 7.0, 6.0, 0.0);
+        calcularMediaEStatus(5.0, 5.0, 5.0, 5.0);
+        calcularMediaEStatus(4.0, 4.0, 4.0, 7.0);
+    }
+
+    public static void calcularMediaEStatus(double prova1, double prova2, double prova3, double recuperacao) {
+        double media = (prova1 + prova2 + prova3) / 3;
+        String status;
+
+        if (media >= 7.0) {
+            status = "Aprovado";
+        } else {
+            double mediaFinal = (media + recuperacao) / 2;
+            if (mediaFinal >= 5.0) {
+                status = "Aprovado após recuperação";
+            } else {
+                status = "Reprovado";
+            }
+        }
+
+        System.out.println("Média: " + String.format("%.1f", media));
+        System.out.println("Status: " + status);
+    }
+}
