@@ -1,0 +1,22 @@
+function calcularIntervalo(tempo1, tempo2) 
+    var totalSegundos1 = tempo1[0] * 3600 + tempo1[1] * 60 + tempo1[2];
+    var totalSegundos2 = tempo2[0] * 3600 + tempo2[1] * 60 + tempo2[2];
+
+    var somaTotalSegundos = totalSegundos1 + totalSegundos2;
+    var somaHoras = Math.floor(somaTotalSegundos / 3600);
+    var somaMinutos = Math.floor((somaTotalSegundos % 3600) / 60);
+    var somaSegundos = somaTotalSegundos % 60;
+
+    var diferencaTotalSegundos = Math.abs(totalSegundos1 - totalSegundos2);
+    var diferencaHoras = Math.floor(diferencaTotalSegundos / 3600);
+    var diferencaMinutos = Math.floor((diferencaTotalSegundos % 3600) / 60);
+    var diferencaSegundos = diferencaTotalSegundos % 60;
+
+    return {
+        soma: [somaHoras, somaMinutos, somaSegundos],
+        diferenca: [diferencaHoras, diferencaMinutos, diferencaSegundos]
+    };
+}
+
+console.log("Soma:", resultado.soma.join(":"));
+console.log("Diferença:", resultado.diferenca.join(":"));
