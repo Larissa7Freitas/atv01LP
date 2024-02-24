@@ -1,3 +1,5 @@
+public class ContarDigitos {
+    public static void main(String[] args) {
 function contarDigitos(numero) {
     return String(numero).length;
 }
