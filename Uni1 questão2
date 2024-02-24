@@ -1,1 +1,22 @@
+public class CalculoDesconto {
+    public static void main(String[] args) {
+function calcularDescontoA(livros) {
+    return 0.25 * livros + 7.50;
+}
 
+function calcularDescontoB(livros) {
+    return 0.50 * livros + 2.50;
+}
+
+function melhorOpcaoDesconto(livros) {
+    var totalDescontoA = calcularDescontoA(livros);
+    var totalDescontoB = calcularDescontoB(livros);
+
+    if (totalDescontoA < totalDescontoB) {
+        return "Opção A é melhor. Total: R$" + totalDescontoA.toFixed(2);
+    } else if (totalDescontoB < totalDescontoA) {
+        return "Opção B é melhor. Total: R$" + totalDescontoB.toFixed(2);
+    } else {
+        return "Ambas as opções têm o mesmo desconto. Total: R$" + totalDescontoA.toFixed(2);
+    }
+}
