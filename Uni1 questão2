@@ -8,6 +8,7 @@ function calcularDescontoB(livros) {
     return 0.50 * livros + 2.50;
 }
 
+public static void melhorOpcaoDesconto( String[] args) {
 function melhorOpcaoDesconto(livros) {
     var totalDescontoA = calcularDescontoA(livros);
     var totalDescontoB = calcularDescontoB(livros);
