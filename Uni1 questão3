@@ -1,3 +1,5 @@
+public class calcularIntervalo {
+    public static void main(String[] args) {
 function calcularIntervalo(tempo1, tempo2) 
     var totalSegundos1 = tempo1[0] * 3600 + tempo1[1] * 60 + tempo1[2];
     var totalSegundos2 = tempo2[0] * 3600 + tempo2[1] * 60 + tempo2[2];
